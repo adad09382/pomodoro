@@ -15,12 +15,7 @@
         >
       </v-container>
     </v-app-bar>
-    <v-main
-      style="
-        background: url('pomodoro/blob/master/src/assets/Bg.jpeg') no-repeat
-          center/100% 100%;
-      "
-    >
+    <v-main>
       <!-- Component 是目前頁面該顯示的元件 -->
       <router-view v-slot="{ Component }">
         <!-- keep -alive 讓路由切換時不會銷毀元件，用 include 指定只有 Home 不會被銷毀 -->
@@ -34,3 +29,8 @@
 </template>
 
 <script setup></script>
+<style scoped>
+.v-main {
+  background: url("@/assets/Bg.jpeg") no-repeat center/100% 100%;
+}
+</style>
