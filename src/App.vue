@@ -16,7 +16,10 @@
       </v-container>
     </v-app-bar>
     <v-main
-      style="background: url('@/assets/Bg.jpeg') no-repeat center/100% 100%"
+      style="
+        background: url('pomodoro/blob/master/assets/Bg.jpeg') no-repeat
+          center/100% 100%;
+      "
     >
       <!-- Component 是目前頁面該顯示的元件 -->
       <router-view v-slot="{ Component }">
