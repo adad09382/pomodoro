@@ -1,5 +1,5 @@
 <template>
-  <v-container style="color: aliceblue">
+  <v-container class="text-white">
     <v-row class="text-center">
       <v-col cols="12">
         <h1>{{ currentText }}</h1>

@@ -1,18 +1,11 @@
 <template>
   <v-app>
     <v-app-bar color="transparent">
-      <v-container class="d-flex align-center">
+      <v-container class="d-flex align-center text-white">
         <v-app-bar-title>番茄鐘</v-app-bar-title>
-        <v-btn style="color: white" prepend-icon="mdi-home" to="/">首頁</v-btn>
-        <v-btn
-          style="color: white"
-          prepend-icon="mdi-format-list-bulleted"
-          to="/list"
-          >事項</v-btn
-        >
-        <v-btn style="color: white" prepend-icon="mdi-cog" to="/settings"
-          >設定</v-btn
-        >
+        <v-btn prepend-icon="mdi-home" to="/">首頁</v-btn>
+        <v-btn prepend-icon="mdi-format-list-bulleted" to="/list">事項</v-btn>
+        <v-btn prepend-icon="mdi-cog" to="/settings">設定</v-btn>
       </v-container>
     </v-app-bar>
     <v-main>
@@ -32,5 +25,8 @@
 <style scoped>
 .v-main {
   background: url("@/assets/Bg.jpeg") no-repeat center/100% 100%;
+}
+.text-white {
+  color: white !important;
 }
 </style>

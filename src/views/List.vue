@@ -1,12 +1,11 @@
 <template>
-  <v-container>
+  <v-container class="text-white">
     <v-row>
       <v-col cols="12">
-        <h1 style="color: white">事項</h1>
+        <h1>事項</h1>
       </v-col>
       <v-col cols="12">
         <v-text-field
-          style="color: white"
           v-model="newItem"
           label="新增事項"
           append-icon="mdi-plus"
@@ -16,11 +15,11 @@
           ref="newItemInput"
         >
         </v-text-field>
-        <v-table style="background: transparent">
+        <v-table style="background: transparent" class="text-white">
           <thead>
             <tr>
-              <th style="color: white !important">名稱</th>
-              <th style="color: white !important">操作</th>
+              <th class="text-white">名稱</th>
+              <th class="text-white">操作</th>
             </tr>
           </thead>
           <tbody>
@@ -70,26 +69,20 @@
               </td>
             </tr>
             <tr v-if="items.length === 0">
-              <td
-                colspan="2"
-                class="text-center"
-                style="color: white !important"
-              >
-                沒有事項
-              </td>
+              <td colspan="2" class="text-center">沒有事項</td>
             </tr>
           </tbody>
         </v-table>
       </v-col>
       <v-col cols="12">
-        <h1 style="color: white">已完成事項</h1>
+        <h1>已完成事項</h1>
       </v-col>
-      <v-col cols="12" style="color: white">
+      <v-col cols="12">
         <v-table style="background: transparent; color: white">
           <thead>
             <tr>
-              <th style="color: white">名稱</th>
-              <th style="color: white">操作</th>
+              <th class="text-white">名稱</th>
+              <th class="text-white">操作</th>
             </tr>
           </thead>
           <tbody>

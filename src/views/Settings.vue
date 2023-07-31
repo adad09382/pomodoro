@@ -1,42 +1,30 @@
 <template>
-  <v-container>
+  <v-container class="text-white">
     <v-row>
       <v-col cols="12">
-        <h1 style="color: white !important">通知</h1>
+        <h1>通知</h1>
       </v-col>
       <v-col cols="12">
         <v-radio-group inline v-model="notify">
-          <v-radio
-            label="開啟"
-            :value="true"
-            style="color: white !important"
-          ></v-radio>
-          <v-radio
-            label="關閉"
-            :value="false"
-            style="color: white !important"
-          ></v-radio>
+          <v-radio label="開啟" :value="true"></v-radio>
+          <v-radio label="關閉" :value="false"></v-radio>
         </v-radio-group>
       </v-col>
       <v-col cols="12">
-        <h1 style="color: white !important">設定</h1>
+        <h1>設定</h1>
       </v-col>
       <v-col cols="12">
         <v-table style="background: transparent !important">
           <thead>
             <tr>
-              <th style="color: white !important">名稱</th>
-              <th style="color: white !important">試聽</th>
-              <th style="color: white !important">選擇</th>
+              <th class="text-white">名稱</th>
+              <th class="text-white">試聽</th>
+              <th class="text-white">選擇</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody class="text-white">
             <!-- <tr v-for="alarm in settings.alarms" :key="alarm.id"> -->
-            <tr
-              v-for="alarm in alarms"
-              :key="alarm.id"
-              style="color: white !important"
-            >
+            <tr v-for="alarm in alarms" :key="alarm.id">
               <td>{{ alarm.name }}</td>
               <td>
                 <audio :src="alarm.file" controls></audio>
