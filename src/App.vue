@@ -1,19 +1,35 @@
 <template>
-  <!-- <v-app> <v-app> -->
-  <!-- 網頁主體用v-app -->
   <v-app>
-    <!-- 導覽頁用v-app-bar -->
-    <v-app-bar>
-      <!-- 導覽列標題用 v-app-bar-title -->
-      <v-app-bar-title>校園社團介紹網</v-app-bar-title>
-      <v-btn prepend-icon="mdi-home" to="/" :active="false">回首頁</v-btn>
+    <v-app-bar color="transparent">
+      <v-container class="d-flex align-center">
+        <v-app-bar-title>番茄鐘</v-app-bar-title>
+        <v-btn style="color: white" prepend-icon="mdi-home" to="/">首頁</v-btn>
+        <v-btn
+          style="color: white"
+          prepend-icon="mdi-format-list-bulleted"
+          to="/list"
+          >事項</v-btn
+        >
+        <v-btn style="color: white" prepend-icon="mdi-cog" to="/settings"
+          >設定</v-btn
+        >
+      </v-container>
     </v-app-bar>
-    <!-- 網站內容用v-main -->
-    <v-main>
-      <!-- 顯示路由元件 -->
-      <router-view></router-view>
+    <v-main
+      style="
+        background: url('../src/assets/Bg.jpeg') no-repeat center/100% 100%;
+      "
+    >
+      <!-- Component 是目前頁面該顯示的元件 -->
+      <router-view v-slot="{ Component }">
+        <!-- keep -alive 讓路由切換時不會銷毀元件，用 include 指定只有 Home 不會被銷毀 -->
+        <!-- component 動態元件，顯示 is 綁定的元件 -->
+        <keep-alive include="Home">
+          <component :is="Component"></component>
+        </keep-alive>
+      </router-view>
     </v-main>
-    <!-- footer 用 v-footer，加上app可以固定在底部 -->
-    <v-footer app> 最近更新日期：2023/03/30 </v-footer>
   </v-app>
 </template>
+
+<script setup></script>
