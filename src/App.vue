@@ -17,7 +17,7 @@
     </v-app-bar>
     <v-main
       style="
-        background: url('pomodoro/blob/master/assets/Bg.jpeg') no-repeat
+        background: url('pomodoro/blob/master/src/assets/Bg.jpeg') no-repeat
           center/100% 100%;
       "
     >
